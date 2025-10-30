@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L11 Modal & Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="AS11style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand fw-bold">Sorasak Sonkrai</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbar1" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#videoSection" class="nav-link">Videos</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="slider">
+    <div class="carousel slide" data-bs-ride="carousel" id="mySlider">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mySlider" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mySlider" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active carousel-image-1">
+          <div class="overlay"></div>
+          <div class="carousel-caption">
+            <h1 class="fw-bold">สถานที่ท่องเที่ยว A</h1>
+            <p>ทะเลและท้องฟ้าอันสวยงาม</p>
+          </div>
+        </div>
+        <div class="carousel-item carousel-image-2">
+          <div class="overlay"></div>
+          <div class="carousel-caption">
+            <h1 class="fw-bold">สถานที่ท่องเที่ยว B</h1>
+            <p>ภูเขาและธรรมชาติที่ยิ่งใหญ่</p>
+          </div>
+        </div>
+        <div class="carousel-item carousel-image-3">
+          <div class="overlay"></div>
+          <div class="carousel-caption">
+            <h1 class="fw-bold">สถานที่ท่องเที่ยว C</h1>
+            <p>เมืองและวัฒนธรรมที่หลากหลาย</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#mySlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mySlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <section id="service" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">บริการของเรา</h2>
+        <p class="text-muted">เลือกบริการที่เหมาะกับคุณ</p>
+      </div>
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <h3>ไกด์นำเที่ยว</h3>
+          <p>รายละเอียดการเดินทางพร้อมคนดูแล เพื่อให้ทริปของคุณสนุกและปลอดภัย Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus iste asperiores nulla! Ad quia minima rem quos ea. Fugit, incidunt sit nam quas pariatur quo libero consequatur aperiam perspiciatis eveniet.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>แพ็กเกจทัวร์</h3>
+          <p>หลากหลายแพ็กเกจราคาพิเศษ ครอบคลุมทั้งในประเทศและต่างประเทศ Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, aliquid dicta tempore tempora assumenda quaerat maiores obcaecati explicabo reprehenderit dolorum magnam, sequi sed voluptatem repudiandae numquam nisi nulla similique ratione.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>การเดินทาง</h3>
+          <p>สะดวกสบายด้วยการเดินทางที่หลากหลาย ทั้งรถบัสและเครื่องบิน Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure at odio maxime mollitia? Placeat asperiores officiis impedit accusantium. Eveniet quos laudantium nesciunt eum quod, qui ullam iste dolorum enim voluptate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">แบบฟอร์มติดต่อ</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">อีเมล</label>
+              <input type="email" class="form-control" id="email" placeholder="กรอกอีเมลของคุณ" required>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">เรื่องที่ติดต่อ</label>
+              <input type="text" class="form-control" id="subject" placeholder="ระบุเรื่องที่ต้องการติดต่อ" required>
+            </div>
+            <div class="mb-3">
+              <label for="detail" class="form-label">รายละเอียดเพิ่มเติม</label>
+              <textarea class="form-control" id="detail" rows="4" placeholder="กรอกรายละเอียดเพิ่มเติม..."></textarea>
+            </div>
+            <div class="d-flex justify-content-end gap-2">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">ยกเลิก</button>
+              <button type="submit" class="btn btn-success">ส่งข้อมูล</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer bg-light">
+          <small class="text-muted">Test 123456</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="videoSection" class="container my-5">
+    <div class="ratio ratio-16x9 shadow-lg rounded">
+      <video autoplay loop muted playsinline>
+        <source src="Asset/sample.mp4" type="video/mp4">
+        <source src="Asset/sample.webm" type="video/webm">
+        เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
+      </video>
+    </div>
+    <div class="text-center mt-4">
+      <audio id="bgMusic" loop preload="auto">
+        <source src="Sound/music.mp3" type="audio/mpeg">
+        <source src="Sound/music.ogg" type="audio/ogg">
+        เบราว์เซอร์ของคุณไม่รองรับการเล่นเสียง
+      </audio>
+    </div>
+  </section>
+
+  <section id="bg">
+    <video autoplay loop muted playsinline>
+        <source src="Asset/sample.mp4" type="video/mp4">
+        <source src="Asset/sample.webm" type="video/webm">
+        เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
+    </video>
+    <div class="overlay">
+        <h1 class="display-3 fw-bold">Hello Mamy</h1>
+    </div>
+  </section>
+
+  <footer class="text-center bg-dark text-white py-3 w-100">
+    <h6 class="mb-0">Copyright &copy; 2025 Sorasak Sonkrai</h6>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const bgMusic = document.getElementById("bgMusic");
+      function startMusic() {
+        if (bgMusic) {
+          bgMusic.play().catch(() => {}); 
+          bgMusic.volume = 0.1;
+        }
+        document.removeEventListener("click", startMusic);
+        document.removeEventListener("scroll", startMusic);
+        document.removeEventListener("keydown", startMusic);
+      }
+      document.addEventListener("click", startMusic);
+      document.addEventListener("scroll", startMusic);
+      document.addEventListener("keydown", startMusic);
+    });
+  </script>
+
+</body>
+</html>
